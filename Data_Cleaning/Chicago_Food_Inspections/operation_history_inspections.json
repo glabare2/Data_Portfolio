@@ -1,0 +1,1234 @@
+[
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "City",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "CHICAGO",
+          "Chicago",
+          "chicago",
+          "CHicago",
+          "CHICAGOI",
+          "312CHICAGO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CHICAGO"
+      },
+      {
+        "from": [
+          "OLYMPIA FIELDS",
+          "OOLYMPIA FIELDS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "OLYMPIA FIELDS"
+      },
+      {
+        "from": [
+          "MAYWOOD",
+          "Maywood"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MAYWOOD"
+      },
+      {
+        "from": [
+          "ALSIP",
+          "alsip"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ALSIP"
+      }
+    ],
+    "description": "Mass edit cells in column City"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "City",
+          "expression": "value",
+          "columnName": "City",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "CHICAGOHICAGO",
+                "l": "CHICAGOHICAGO"
+              }
+            },
+            {
+              "v": {
+                "v": "CHICAGO",
+                "l": "CHICAGO"
+              }
+            },
+            {
+              "v": {
+                "v": "CHICAGOCHICAGO",
+                "l": "CHICAGOCHICAGO"
+              }
+            },
+            {
+              "v": {
+                "v": "CCHICAGO",
+                "l": "CCHICAGO"
+              }
+            },
+            {
+              "v": {
+                "v": "CHCHICAGO",
+                "l": "CHCHICAGO"
+              }
+            },
+            {
+              "v": {
+                "v": "CHCICAGO",
+                "l": "CHCICAGO"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "record-based"
+    },
+    "columnName": "City",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "CHICAGO",
+          "CCHICAGO",
+          "CHCHICAGO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CHICAGO"
+      },
+      {
+        "from": [
+          "CHICAGOCHICAGO",
+          "CHICAGOHICAGO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CHICAGO"
+      }
+    ],
+    "description": "Mass edit cells in column City"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Children's Services Facility",
+          "1023 CHILDERN'S SERVICES FACILITY",
+          "1023-CHILDREN'S SERVICES FACILITY",
+          "1023 CHILDERN'S SERVICE FACILITY",
+          "1023 CHILDERN'S SERVICE S FACILITY",
+          "CHILDRENS SERVICES FACILITY",
+          "CHILDERN'S SERVICE FACILITY",
+          "CHILDERN'S SERVICES  FACILITY",
+          "1023 CHILDREN'S SERVICES FACILITY"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CHILDREN'S SERVICES FACILITY"
+      },
+      {
+        "from": [
+          "Mobile Frozen Desserts Vendor",
+          "MOBILE FROZEN DESSERTS DISPENSER-NON-MOTORIZED",
+          "MOBILE FROZEN DESSERTS VENDOR",
+          "MOBILE FROZEN DESSERT VENDOR",
+          "Mobile Frozen Dessert Dispenser_non  Motorized.",
+          "Mobile Frozen Dessert Disp/Non-motorized",
+          "MOBILE FROZEN DESSERTS DISPENSER-NON- MOTORIZED",
+          "MOBILE FROZEN DESSERTS DISPENSER-NON-MOTOR",
+          "Mobile frozen dessert vendor"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MOBILE FROZEN DESSERTS VENDOR"
+      },
+      {
+        "from": [
+          "GROCERY/RESTAURANT",
+          "Grocery & Restaurant",
+          "GROCERY& RESTAURANT",
+          "grocery & restaurant",
+          "GROCERY/ RESTAURANT",
+          "GROCERY & RESTAURANT"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "GROCERY/RESTAURANT"
+      },
+      {
+        "from": [
+          "Long Term Care",
+          "Long Term Care Facility",
+          "Long-Term Care",
+          "Long-Term Care Facility",
+          "LONG TERM CARE FACILITY"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LONG TERM CARE FACILITY"
+      },
+      {
+        "from": [
+          "DAYCARE",
+          "DAY CARE 2-14",
+          "DAY CARE 1023",
+          "DAY CARE",
+          "DAYCARE 1586"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DAYCARE"
+      },
+      {
+        "from": [
+          "CONVENIENCE STORE",
+          "convenience store",
+          "CONVNIENCE STORE",
+          "(convenience store)",
+          "Convenience Store"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CONVENIENCE STORE"
+      },
+      {
+        "from": [
+          "TAVERN",
+          "tavern",
+          "Tavern",
+          "TAVERN/1006"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "TAVERN"
+      },
+      {
+        "from": [
+          "GAS STATION",
+          "gas station",
+          "(gas station)",
+          "Gas station"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "GAS STATION"
+      },
+      {
+        "from": [
+          "ASSISTED LIVING",
+          "Assisted Living Senior Care",
+          "Assisted Living",
+          "ASSISSTED LIVING"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ASSISTED LIVING"
+      },
+      {
+        "from": [
+          "coffee shop",
+          "Coffee shop",
+          "COFFEE  SHOP",
+          "COFFEE SHOP"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "COFFEE SHOP"
+      },
+      {
+        "from": [
+          "CHURCH/SPECIAL EVENTS",
+          "CHURCH (SPECIAL EVENTS)",
+          "CHURCH/SPECIAL EVENT"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CHURCH/SPECIAL EVENTS"
+      },
+      {
+        "from": [
+          "THEATER",
+          "THEATRE",
+          "theater"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "THEATER"
+      },
+      {
+        "from": [
+          "Daycare Combo 1586",
+          "DAYCARE COMBO",
+          "Day Care Combo (1586)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DAYCARE COMBO"
+      },
+      {
+        "from": [
+          "CAFETERIA",
+          "Cafeteria",
+          "cafeteria"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CAFETERIA"
+      },
+      {
+        "from": [
+          "dollar store",
+          "DOLLAR STORE",
+          "Dollar store"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DOLLAR STORE"
+      },
+      {
+        "from": [
+          "COMMISSARY",
+          "Commissary",
+          "COMMIASARY"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "COMMISSARY"
+      },
+      {
+        "from": [
+          "BANQUET HALL",
+          "Banquet Hall",
+          "banquet hall"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BANQUET HALL"
+      },
+      {
+        "from": [
+          "BAR",
+          "bar"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BAR"
+      },
+      {
+        "from": [
+          "ROOF TOPS",
+          "ROOFTOPS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ROOFTOP"
+      },
+      {
+        "from": [
+          "CANDY/GELATO",
+          "candy/gelato"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CANDY/GELATO"
+      },
+      {
+        "from": [
+          "NOT-FOR-PROFIT CLUB",
+          "NOT FOR PROFIT"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "NOT-FOR-PROFIT CLUB"
+      },
+      {
+        "from": [
+          "grocery",
+          "GROCERY"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "GROCERY"
+      },
+      {
+        "from": [
+          "MOVIE THEATRE",
+          "MOVIE THEATER"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MOVIE THEATER"
+      },
+      {
+        "from": [
+          "GAS STATION /GROCERY",
+          "GAS STATION/ GROCERY STORE"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "GROCERY STORE/GAS STATION"
+      },
+      {
+        "from": [
+          "BAKERY/ RESTAURANT",
+          "bakery/restaurant"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BAKERY/RESTAURANT"
+      },
+      {
+        "from": [
+          "LIVE POULTRY",
+          "Live Poultry"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LIVE POULTRY"
+      },
+      {
+        "from": [
+          "TAVERN-LIQUOR",
+          "TAVERN/LIQUOR"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "TAVERN/LIQUOR"
+      },
+      {
+        "from": [
+          "RESTAURANT/GROCERY STORE",
+          "RESTAURANT/GROCERY"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "RESTAURANT/GROCERY STORE"
+      },
+      {
+        "from": [
+          "CONVENIENCE",
+          "convenience"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CONVENIENCE"
+      },
+      {
+        "from": [
+          "tavern/restaurant",
+          "TAVERN/RESTAURANT"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "TAVERN/RESTAURANT"
+      },
+      {
+        "from": [
+          "AFTER SCHOOL PROGRAM",
+          "after school program"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "AFTER SCHOOL PROGRAM"
+      },
+      {
+        "from": [
+          "HERBALIFE",
+          "Herabalife"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HERBALIFE"
+      },
+      {
+        "from": [
+          "CHURCH",
+          "Church"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CHURCH"
+      },
+      {
+        "from": [
+          "KIDS CAFE",
+          "Kids Cafe'"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KIDS CAFE"
+      },
+      {
+        "from": [
+          "WAREHOUSE",
+          "warehouse"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WAREHOUSE"
+      },
+      {
+        "from": [
+          "FOOD PANTRY",
+          "Food Pantry"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FOOD PANTRY"
+      },
+      {
+        "from": [
+          "School",
+          "SCHOOL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SCHOOL"
+      },
+      {
+        "from": [
+          "weight loss program",
+          "WEIGHT LOSS PROGRAM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WEIGHT LOSS PROGRAM"
+      },
+      {
+        "from": [
+          "school cafeteria",
+          "School Cafeteria"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SCHOOL CAFETERIA"
+      },
+      {
+        "from": [
+          "NURSING HOME",
+          "1005 NURSING HOME"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "NURSING HOME"
+      },
+      {
+        "from": [
+          "Laundromat",
+          "LAUNDROMAT"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LAUNDROMAT"
+      },
+      {
+        "from": [
+          "Mobile Prepared Food Vendor",
+          "MOBILPREPARED FOOD VENDOR"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MOBILE PREPARED FOOD VENDOR"
+      },
+      {
+        "from": [
+          "PRIVATE SCHOOL",
+          "Private School"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "PRIVATE SCHOOL"
+      },
+      {
+        "from": [
+          "newsstand",
+          "NEWSSTAND"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "NEWSSTAND"
+      },
+      {
+        "from": [
+          "SUPPORTIVE LIVING",
+          "SUPPORTIVE LIVING FACILITY"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SUPPORTIVE LIVING"
+      },
+      {
+        "from": [
+          "butcher shop",
+          "BUTCHER SHOP"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BUTCHER SHOP"
+      },
+      {
+        "from": [
+          "FITNESS CENTER",
+          "fitness center"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FITNESS CENTER"
+      },
+      {
+        "from": [
+          "COOKING SCHOOL",
+          "cooking school"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "COOKING SCHOOL"
+      },
+      {
+        "from": [
+          "Wrigley Roof Top",
+          "WRIGLEY ROOFTOP"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "WRIGLEY ROOFTOP"
+      },
+      {
+        "from": [
+          "ROOFTOP",
+          "ROOF TOP"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ROOFTOP"
+      },
+      {
+        "from": [
+          "SOCIAL CLUB",
+          "Social Club"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SOCIAL CLUB"
+      },
+      {
+        "from": [
+          "BANQUET",
+          "Banquet"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "BANQUET"
+      },
+      {
+        "from": [
+          "unlicensed facility",
+          "UNLICENSED FACILITY"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "UNLICENSED FACILITY"
+      },
+      {
+        "from": [
+          "CHARTER SCHOOL CAFETERIA",
+          "CHARTER SCHOOL/CAFETERIA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CHARTER SCHOOL CAFETERIA"
+      },
+      {
+        "from": [
+          "Ice cream",
+          "ICE CREAM"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "ICE CREAM"
+      },
+      {
+        "from": [
+          "CHURCH KITCHEN",
+          "Church Kitchen"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CHURCH KITCHEN"
+      },
+      {
+        "from": [
+          "MOBILE FOOD",
+          "MOBIL FOOD 1315"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "MOBILE FOOD"
+      },
+      {
+        "from": [
+          "NIGHT CLUB",
+          "night club"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "NIGHT CLUB"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "GAS STATION/STORE",
+          "GAS STATION STORE"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "GAS STATION/STORE"
+      },
+      {
+        "from": [
+          "GROCERY STORE/GAS STATION",
+          "GROCERY STORE / GAS STATION"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "GROCERY STORE/GAS STATION"
+      },
+      {
+        "from": [
+          "FROZEN DESSERTS DISPENSER -NON MOTORIZED",
+          "FROZEN DESSERTS DISPENSER-NON-MOTORIZED"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FROZEN DESSERTS DISPENSER NON-MOTORIZED"
+      },
+      {
+        "from": [
+          "HERBALIFE",
+          "HERBAL LIFE"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "HERBALIFE"
+      },
+      {
+        "from": [
+          "Shared Kitchen User (Long Term)",
+          "SHARED KITCHEN USER (LONG TREM)"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "SHARED KITCHEN USER (LONG TERM)"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection Date",
+    "expression": "grel:value.toDate(\"dd/MM/yyyy\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Inspection Date using expression grel:value.toDate(\"dd/MM/yyyy\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection Date",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Inspection Date using expression value.toDate()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection ID",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Inspection ID using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "License #",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column License # using expression value.toNumber()"
+  },
+  {
+    "op": "core/column-split",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Risk",
+    "guessCellType": true,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": "(",
+    "regex": false,
+    "maxColumns": 0,
+    "description": "Split column Risk by separator"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Risk 1",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Risk 1 using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Risk 2",
+    "expression": "grel:value.replace('\\)','')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Risk 2 using expression grel:value.replace('\\)','')"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Risk 1",
+    "newColumnName": "Risk Level",
+    "description": "Rename column Risk 1 to Risk Level"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Risk 2",
+    "newColumnName": "Risk",
+    "description": "Rename column Risk 2 to Risk"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection Type",
+    "expression": "value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Inspection Type using expression value.toUppercase()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "KIDS CAFE",
+          "KIDS CAFE'"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "KIDS CAFE"
+      }
+    ],
+    "description": "Mass edit cells in column Inspection Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "OUT OF BUSINESS",
+          "OUT OFBUSINESS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "OUT OF BUSINESS"
+      },
+      {
+        "from": [
+          "TASK FORCE",
+          "TASKFORCE"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "TASK FORCE"
+      }
+    ],
+    "description": "Mass edit cells in column Inspection Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "CANVASS SPECIAL EVENTS",
+          "CANVASS/SPECIAL EVENT"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CANVASS SPECIAL EVENTS"
+      },
+      {
+        "from": [
+          "CANVASS",
+          "CANVAS"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CANVASS"
+      },
+      {
+        "from": [
+          "LICENSE RE-INSPECTION",
+          "1315 LICENSE REINSPECTION"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LICENSE RE-INSPECTION"
+      }
+    ],
+    "description": "Mass edit cells in column Inspection Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "FIRE/COMPLAIN"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FIRE COMPLAINt"
+      }
+    ],
+    "description": "Mass edit cells in column Inspection Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "FIRE COMPLAINt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "FIRE COMPLAINT"
+      }
+    ],
+    "description": "Mass edit cells in column Inspection Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "LICENSE TASK FORCE / NOT -FOR-PROFIT CLU"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LICENSE TASK FORCE / NOT-FOR-PROFIT CLUB"
+      }
+    ],
+    "description": "Mass edit cells in column Inspection Type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "LICENSE TASK FORCE / NOT -FOR-PROFIT CLUB"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "LICENSE TASK FORCE / NOT-FOR-PROFIT CLUB"
+      }
+    ],
+    "description": "Mass edit cells in column Inspection Type"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Violations 1",
+    "description": "Remove column Violations 1"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Violations 2",
+    "description": "Remove column Violations 2"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Zip",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Zip using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Latitude",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Latitude using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Longitude",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Longitude using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Facility Type using expression value.toUppercase()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Facility Type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "CONVENIENT STORE"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "CONVENIENCE STORE"
+      }
+    ],
+    "description": "Mass edit cells in column Facility Type"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Violations",
+    "description": "Remove column Violations"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "DBA Name",
+    "expression": "value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column DBA Name using expression value.toUppercase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "AKA Name",
+    "expression": "value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column AKA Name using expression value.toUppercase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Inspection Date",
+    "expression": "grel:value.substring(0, -7)",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Inspection Date using expression grel:value.substring(0, -7)"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Risk Level",
+    "expression": "value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Risk Level using expression value.toUppercase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Risk",
+    "expression": "value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Risk using expression value.toUppercase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Results",
+    "expression": "value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Results using expression value.toUppercase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Address",
+    "expression": "value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Address using expression value.toUppercase()"
+  }
+]
