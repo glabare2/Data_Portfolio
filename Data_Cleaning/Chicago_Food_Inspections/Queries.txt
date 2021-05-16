@@ -1,0 +1,246 @@
+DROP SCHEMA IF EXISTS chicago_food_inspections;
+CREATE SCHEMA IF NOT EXISTS chicago_food_inspections;
+
+USE chicago_food_inspections;
+
+DROP TABLE IF EXISTS chicago_food_inspections.inspections;
+CREATE TABLE IF NOT EXISTS chicago_food_inspections.inspections (
+  Inspection_ID INT PRIMARY KEY NOT NULL,
+  DBA_Name VARCHAR(255) NULL,
+  AKA_Name VARCHAR(255) NULL,
+  License_ Number INT NULL,
+  Facitlity_Type VARCHAR(100) NULL,
+  Risk_Level VARCHAR(10) NULL,
+  Risk VARCHAR(10) NULL,
+  Address VARCHAR(100) NULL,
+  City VARCHAR(45) NULL,
+  State VARCHAR(45) NULL,
+  Zip INT NULL,
+  Inspection_Date DATETIME NULL,
+  Inspection_Type VARCHAR(255) NULL,
+  Results VARCHAR(45) NULL,
+  Latitude DECIMAL(17,15) NULL,
+  Longitude DECIMAL(17,15) NULL,
+  Location VARCHAR(45) NULL;
+
+DROP TABLE IF EXISTS chicago_food_inspections.violations;
+CREATE TABLE IF NOT EXISTS chicago_food_inspections.violations (
+  Inspection_ID INT NULL,
+  Liscense_Number INT NULL,
+  Violation_ID INT NULL,
+  Violation_Comments VARCHAR(3000) NULL;
+
+INSERT INTO inspections (Inspection_ID,DBA_Name,AKA_Name,License_Number,Facility_Type,Risk_Level,Risk,Address,City,State,Zip,Inspection_Date,Inspection_Type,Results,Latitude,Longitude,Location) VALUES 
+( 67732,'WOLCOTT''S','TROQUET',1992039,'RESTAURANT','RISK 1','HIGH','1834 W MONTROSE AVE ','CHICAGO','IL',60613,'2010-04-01','LICENSE RE-INSPECTION','PASS','41.961605669949854','-87.67596676683779','(-87.67596676683779, 41.961605669949854)' ),
+( 67738,'MICHAEL''S ON MAIN CAFE','MICHAEL''S ON MAIN CAFE',2008948,'RESTAURANT','RISK 1','HIGH','8750 W BRYN WAWR AVE ','CHICAGO','IL',60631,'2010-04-01','LICENSE','FAIL',null,null,null ),
+( 67757,'DUNKIN DONUTS/BASKIN-ROBBINS','DUNKIN DONUTS/BASKIN-ROBBINS',1380279,'RESTAURANT','RISK 2','MEDIUM','100 W RANDOLPH ST ','CHICAGO','IL',60601,'2010-04-01','TAG REMOVAL','PASS','41.88458626715456','-87.63101044588599','(-87.63101044588599, 41.88458626715456)' ),
+( 104236,'TEMPO CAFE','TEMPO CAFE',80916,'RESTAURANT','RISK 1','HIGH','6 E CHESTNUT ST ','CHICAGO','IL',60611,'2010-04-01','CANVASS','FAIL','41.89843137207629','-87.6280091630558','(-87.6280091630558, 41.89843137207629)' ),
+============================AND SO ON============================
+
+INSERT INTO violations(Inspection_ID,License_Number,Violation_ID,Violation_Comments)VALUES
+(67732,1992039,null,null ),
+(67738,2008948,18,'must provide pest control log book.' ),
+(67738,2008948,32,'Pastry door not in good repair. must repair' ),
+(67738,2008948,34,'must clean in detail and repair the basenoard in the prep area.' ),
+(67738,2008948,35,'must clean in detail the walls by the knife rack.' ),
+(67738,2008948,36,'need to replace burned out light bulb and provide light shield in the prep front area.' ),
+(67757,1380279,null,null ),
+============================AND SO ON============================
+
+USE chicago_food_inspections;
+ALTER TABLE violations
+ADD Number_of_Violations INT PRIMARY KEY AUTO_INCREMENT ;
+
+DROP TABLE IF EXISTS chicago_food_inspections.inspection_violations;
+CREATE TABLE IF NOT EXISTS chicago_food_inspections.inspection_violations (
+  Inspection_ID INT NOT NULL,
+  Number_of_Violations INT NOT NULL;
+
+USE chicago_food_inspections;
+SELECT CONCAT('(', Inspection_ID,', ', Number_of_Violations, ')') AS inspection_violations_table
+FROM violations;
+==================EXPORT AS CSV===============
+
+INSERT INTO inspection_violations(Inspection_ID, Number_of_Violations)VALUES
+(44247, 274),
+(44247, 275),
+(44247, 276),
+(44247, 277),
+(44247, 278),
+(44247, 279),
+(44248, 2934),
+============================AND SO ON============================
+=========Connected Key Constraints Via MySQL========
+=========REMOVED PRIMARY KEY AND FOREIGN KEY CONSTRAINTS========
+=========TO TEST DENIAL MODE QUERIES========
+
+INSERT INTO inspections (Inspection_ID,DBA_Name,AKA_Name,License_Number,Facility_Type,Risk_Level,Risk,Address,City,State,Zip,Inspection_Date,Inspection_Type,Results,Latitude,Longitude,Location) VALUES ('44247', 'EAT A PITA', 'EAT A PITA', '1222441', 'RESTAURANT', 'RISK 2', 'LOW', '3155 N HALSTED ST ', 'CHICAGO', 'IL', '60657', '2010-05-01 00:00:00', 'COMPLAINT', 'PASS', '41.939441157014680', '-87.649102771488120', '(-87.64910277148812, 41.93944115701468)');
+
+USE chicago_food_inspections;
+SELECT i1.*
+FROM inspections i1
+JOIN inspections i2
+ON i1.Inspection_ID = i2.Inspection_ID
+WHERE (i1.DBA_Name != i2.DBA_Name) 
+OR (i1.AKA_Name != i2.AKA_Name) 
+OR (i1.License_Number != i2.License_Number) 
+OR (i1.Facility_Type != i2.Facility_Type) 
+OR (i1.Risk_Level != i2.Risk_Level) 
+OR (i1.Risk != i2.Risk) 
+OR (i1.Address != i2.Address) 
+OR (i1.City != i2.City) 
+OR (i1.State != i2.State) 
+OR (i1.Zip != i2.Zip) 
+OR (i1.Inspection_Date != i2.Inspection_Date) 
+OR (i1.Inspection_Type != i2.Inspection_Type) 
+OR (i1.Results != i2.Results) 
+OR (i1.Latitude != i2.Latitude) 
+OR (i1.Longitude != i2.Longitude) 
+OR (i1.Location != i2.Location);
+
+=========FIX the table using fhe folowing quieries========
+
+USE chicago_food_inspections;
+DELETE FROM inspections WHERE 
+WHERE Inspection_ID = 44247;
+
+INSERT INTO inspections (Inspection_ID,DBA_Name,AKA_Name,License_Number,Facility_Type,Risk_Level,Risk,Address,City,State,Zip,Inspection_Date,Inspection_Type,Results,Latitude,Longitude,Location) VALUES ('44247', 'EAT A PITA', 'EAT A PITA', '1222441', 'RESTAURANT', 'RISK 1', 'HIGH', '3155 N HALSTED ST ', 'CHICAGO', 'IL', '60657', '2010-05-01 00:00:00', 'COMPLAINT', 'PASS', '41.939441157014680', '-87.649102771488120', '(-87.64910277148812, 41.93944115701468)');
+
+=========SQLITE3 DENIAL MODE IN JUPYTER NOTEBOOK========
+
+import sqlite3
+conn = sqlite3.connect('chicago_food_inspections.db')
+c = conn.cursor()
+
+c.execute('''CREATE TABLE violations
+([Number_of_Violations] INT NOT NULL,
+[Inspection_ID] INT NULL,
+[License_Number] INT NULL,
+[Violation_ID] INT NULL,
+[Violation_Comments] TEXT NULL);''')
+
+c.execute('''INSERT INTO violations(Number_of_Violations, 
+Inspection_ID,
+License_Number,
+Violation_ID,
+Violation_Comments)VALUES
+(1, 67732,1992039,null,null ),
+(2, 67738,2008948,18,'must provide pest control log book.' ),
+(3, 67738,2008948,32,'Pastry door not in good repair. must repair' ),
+(4, 67738,2008948,34,'must clean in detail and repair the basenoard in the prep area.' ),
+(5, 67738,2008948,35,'must clean in detail the walls by the knife rack.' ),
+(6, 67738,2008948,36,'need to replace burned out light bulb and provide light shield in the prep front area.' ),
+(7, 67757,1380279,null,null ),
+(2, 67738,2008948,7,'found yucky stuff.' );''')
+
+violation_query = c.execute('''SELECT v1.*
+FROM violations v1
+JOIN violations v2
+ON v1.Number_of_Violations = v2.Number_of_Violations
+WHERE (v1.Inspection_ID != v2.Inspection_ID) 
+OR (v1.License_Number != v2.License_Number)
+OR (v1.Violation_ID != v2.Violation_ID)
+OR (v1.Violation_Comments != v2.Violation_Comments);''')
+
+violation_results = violation_query.fetchall()
+
+violation_results
+
+=========Query for Cleaned Data========
+
+USE chicago_food_inspections;
+SELECT i.Inspection_ID,i.DBA_Name,i.AKA_Name,i.License_Number,i.Facility_Type,i.Risk_Level,i.Risk,Address,i.City,i.State,i.Zip,i.Inspection_Date,i.Inspection_Type,i.Results,v.Violation_ID,v.Violation_Comments,i.Latitude,i.Longitude,i.Location
+FROM
+    inspections i
+        JOIN
+    inspection_violations iv ON i.Inspection_ID = iv.Inspection_ID
+        JOIN
+    violations v ON iv.Number_of_Violations = v.Number_of_Violations;
+
+=========================================
+=========Queries or Final Reports========
+=========================================
+
+=========Query for Good Resturants========
+USE chicago_food_inspections;
+SELECT DISTINCT DBA_Name AS Restaurant, Address, City, State, Zip
+FROM inspections 
+WHERE Results = "PASS"
+AND Inspection_Date BETWEEN '2018-07-01 12:00:00' AND '2021-03-29 21:44:00'
+AND Facility_Type LIKE '%RESTAURANT%'
+AND Latitude BETWEEN '41.867179' AND '41.911391'
+AND Longitude BETWEEN '-87.648264' AND '-87.609128';
+
+=========Query for Bad Resturants========
+USE chicago_food_inspections;
+SELECT DISTINCT DBA_Name AS Restaurant, Address, City, State, Zip
+FROM inspections 
+WHERE Results = "FAIL"
+AND Inspection_Date BETWEEN '2018-07-01 12:00:00' AND '2021-03-29 21:44:00'
+AND Facility_Type LIKE '%RESTAURANT%'
+AND Latitude BETWEEN '41.867179' AND '41.911391'
+AND Longitude BETWEEN '-87.648264' AND '-87.609128';
+
+=========Query or Google Maps Best Resturants========
+USE chicago_food_inspections;
+SELECT DISTINCT DBA_Name AS Restaurant, CONCAT(Latitude, ', ', Longitude) AS Latitude_and_Longitude
+FROM inspections 
+WHERE Results = "PASS"
+AND Inspection_Date BETWEEN '2018-07-01 12:00:00' AND '2021-03-29 21:44:00'
+AND Facility_Type LIKE '%RESTAURANT%'
+AND Latitude BETWEEN '41.867179' AND '41.911391'
+AND Longitude BETWEEN '-87.648264' AND '-87.609128';
+
+=========Query or Google Maps Worst Resturants========
+=========Due to group_concat feature these were========
+=========exported as 3 different execel files and========
+=========copy/pasted into one file.========
+
+USE chicago_food_inspections;
+SELECT DISTINCT i.License_Number, DBA_Name AS Resturant, CONCAT(Latitude, ', ', Longitude) AS Location
+FROM
+    inspections i
+        JOIN
+    inspection_violations iv ON i.Inspection_ID = iv.Inspection_ID
+        JOIN
+    violations v ON iv.Number_of_Violations = v.Number_of_Violations
+WHERE Results = "FAIL"
+AND Inspection_Date BETWEEN '2018-07-01 12:00:00' AND '2021-03-29 21:44:00'
+AND Facility_Type LIKE '%RESTAURANT%'
+AND Latitude BETWEEN '41.867179' AND '41.911391'
+AND Longitude BETWEEN '-87.648264' AND '-87.609128'
+ORDER BY License_Number;
+
+
+USE chicago_food_inspections;
+SELECT DISTINCT v.License_Number, group_concat(v.Violation_ID SEPARATOR ', ') AS Violation_ID
+FROM
+    inspections i
+        JOIN
+    inspection_violations iv ON i.Inspection_ID = iv.Inspection_ID
+        JOIN
+    violations v ON iv.Number_of_Violations = v.Number_of_Violations
+WHERE Results = "FAIL"
+AND Inspection_Date BETWEEN '2018-07-01 12:00:00' AND '2021-03-29 21:44:00'
+AND Facility_Type LIKE '%RESTAURANT%'
+AND Latitude BETWEEN '41.867179' AND '41.911391'
+AND Longitude BETWEEN '-87.648264' AND '-87.609128'
+GROUP BY v.License_Number;
+
+USE chicago_food_inspections;
+SELECT DISTINCT v.License_Number, group_concat(v.Violation_Comments SEPARATOR '|| ') AS Violation_Comments
+FROM
+    inspections i
+        JOIN
+    inspection_violations iv ON i.Inspection_ID = iv.Inspection_ID
+        JOIN
+    violations v ON iv.Number_of_Violations = v.Number_of_Violations
+WHERE Results = "FAIL"
+AND Inspection_Date BETWEEN '2018-07-01 12:00:00' AND '2021-03-29 21:44:00'
+AND Facility_Type LIKE '%RESTAURANT%'
+AND Latitude BETWEEN '41.867179' AND '41.911391'
+AND Longitude BETWEEN '-87.648264' AND '-87.609128'
+GROUP BY v.License_Number;
+
+
+
