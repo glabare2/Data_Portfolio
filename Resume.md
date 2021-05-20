@@ -32,6 +32,7 @@ Graduate Assistant							Aug 2020 - Present<br>
 Music and Performing Arts Library - University of Illinois<br>
 1114 West Nevada Street, Urbana, IL<br>
 (217) 333-1173<br>
+ Omeka digital exhibit on Broadside Ballad collection. Inputted metadata for Broadside Ballad digitization to Internet Archive. Completed several collection<br> development projects for scores, recordings, and books. Assisted students, faculty, and staff with research question at the reference desk and via LibChat.<br> 
 <br>
 Graduate Hourly Librarian						Aug 2019 – May 2020<br>
 Music and Performing Arts Library - University of Illinois<br>
